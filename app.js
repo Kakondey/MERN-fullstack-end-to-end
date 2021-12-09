@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+require('dotenv/config');
 
 const port = 3000;
-const mongodbURL = "mongodb+srv://toppersnotes:toppersnotes@cluster0.omuc7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 /*
 *  Credentails
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 //Connect to DB
-mongoose.connect(mongodbURL, ()=>{
+mongoose.connect(process.env.DB_CONNECTION, ()=>{
     console.log("Connected to mongodb");
 });
 
