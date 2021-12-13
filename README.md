@@ -1,7 +1,6 @@
 ## **Practical Task**
 
-**Instructions**
-
+### Instructions
 • Use React as Frontend base. Allowed to use datatables.
 
 • Use Node as Backend base with Mongodb database
@@ -9,9 +8,7 @@
 • Frontend and backend should communicate via REST APIs only
 
 
-
-**Database**
-
+### Database
 • Auth with different Roles: Admin, Registered User, Guest
 
 • We need to store all Events with fields: Title, Description, Date, Categories (multiple assignable), Location 	(single selectable). All fields are required except categories.
@@ -19,8 +16,7 @@
 • Comments to Event are allowed by Admin and registered users.
 
 
-**Front-End**
-
+### Front-End
 • /categories page		
 
 ◦ Fields to show: Name, Events count		
