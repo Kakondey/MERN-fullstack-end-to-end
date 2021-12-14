@@ -5,21 +5,20 @@ import {
     Routes,
     Route
 } from "react-router-dom";import Layout from "./components/Layout";
-import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Categories from "./pages/Categories";
 import Locations from "./pages/Locations";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
-          <Routes>
-              <Route path='/' element={<Events />} />
-              <Route path='/categories' element={<Categories />} />
-              <Route path='/locations' element={<Locations />} />
-          </Routes>
-      </Layout>
+      <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path='/' element={ <Layout><Events /></Layout>} />
+          <Route path='/categories' element={<Layout><Categories /></Layout>} />
+          <Route path='/locations' element={<Layout><Locations /></Layout>} />
+      </Routes>
     </BrowserRouter>
   );
 }
