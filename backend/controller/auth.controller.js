@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
-
+const SECRET_KEY = "kakon-is-spiderman-is-a-secret"
 exports.signup = (req, res) => {
     const user = new User({
         username: req.body.user,
@@ -53,7 +53,7 @@ exports.signin = (req, res) => {
             });
         }
 
-        var token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, {
+        var token = jwt.sign({ id: user.id }, SECRET_KEY, {
             expiresIn: 86400 // 24 hours
         });
 

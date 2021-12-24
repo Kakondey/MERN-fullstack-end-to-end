@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 const cors = require("cors");
 
+DB_CONNECTION = "mongodb + srv://kakon:kakon@cluster0.sac1y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const port = 3000;
 app.use(cors());
 /*
@@ -33,7 +34,7 @@ app.get('/', (req, res) => {
 })
 
 //Connect to DB
-mongoose.connect(process.env.DB_CONNECTION, () => {
+mongoose.connect(DB_CONNECTION, () => {
     console.log("Connected to mongodb");
 });
 

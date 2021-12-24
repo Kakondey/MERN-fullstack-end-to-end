@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-
+const SECRET_KEY = "kakon-is-spiderman-is-a-secret"
 //Write code here
 router.post('/register', async (req, res) => {
     const user = new User(req.body)
@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
                             role: user[0].role,
                             name: user[0].name,
                             id: user[0]._id,
-                        }, process.env.SECRET_KEY,
+                        }, SECRET_KEY,
                             {
                                 expiresIn: "12h"
                             })
