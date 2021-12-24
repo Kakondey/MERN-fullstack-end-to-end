@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 const cors = require("cors");
 
-DB_CONNECTION = "mongodb + srv://kakon:kakon@cluster0.sac1y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+DB_CONNECTION = "mongodb+srv://kakon:kakon@cluster0.sac1y.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const port = 3000;
 app.use(cors());
 /*
